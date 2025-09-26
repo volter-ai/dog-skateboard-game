@@ -1,42 +1,131 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #87CEEB;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.scene {
+  position: relative;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dog {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.head {
+  width: 60px;
+  height: 60px;
+  background: #8B4513;
+  border-radius: 50%;
+  position: relative;
 }
 
-.card {
-  padding: 2em;
+.ear {
+  width: 20px;
+  height: 30px;
+  background: #8B4513;
+  position: absolute;
+  top: -10px;
+  border-radius: 50%;
 }
 
-.read-the-docs {
-  color: #888;
+.ear.left { left: 5px; }
+.ear.right { right: 5px; }
+
+.face {
+  position: relative;
+}
+
+.eye {
+  width: 8px;
+  height: 8px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+}
+
+.eye.left { left: 15px; }
+.eye.right { right: 15px; }
+
+.nose {
+  width: 12px;
+  height: 8px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  left: 24px;
+}
+
+.body {
+  width: 80px;
+  height: 50px;
+  background: #8B4513;
+  border-radius: 25px;
+  margin-top: -10px;
+}
+
+.legs {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+  margin-left: 5px;
+}
+
+.leg {
+  width: 8px;
+  height: 20px;
+  background: #8B4513;
+  border-radius: 4px;
+}
+
+.tail {
+  width: 30px;
+  height: 8px;
+  background: #8B4513;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  border-radius: 4px;
+}
+
+.skateboard {
+  position: relative;
+}
+
+.deck {
+  width: 120px;
+  height: 20px;
+  background: #4B0082;
+  border-radius: 10px;
+}
+
+.wheels {
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+  margin-left: 5px;
+}
+
+.wheel {
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+  margin-top: -5px;
+}
+
+@keyframes roll {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.wheel {
+  animation: roll 2s linear infinite;
 }

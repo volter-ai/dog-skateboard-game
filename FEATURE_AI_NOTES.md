@@ -1,0 +1,1 @@
+Basic CSS animation of a dog on a skateboard implemented. The dog is styled with CSS shapes and the skateboard has rolling wheel animation.
